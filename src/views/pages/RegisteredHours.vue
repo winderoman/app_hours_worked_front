@@ -168,12 +168,11 @@ onMounted(async () => {
                                         @click="confirmDeleteHour(slotProps.data)" />
                                 </template>
                             </Column>
-                            <Column field="day_worked" header="Día"></Column>
                             <Column field="date_worked" header="Fecha"></Column>
                             <Column field="name_company" header="Empresa"></Column>
-                            <Column field="start_time" header="Desde"></Column>
-                            <Column field="end_time" header="Hasta"></Column>
+                            <Column field="horario" header="Horario"></Column>
                             <Column field="total_hours" header="Horas"></Column>
+                            <Column field="valor_total" header="Valor total"></Column>
                         </DataTable>
 
                         <Dialog v-model:visible="editDialog" :style="{ width: '450px' }" header="Hora registrada"
