@@ -121,7 +121,7 @@ const isValidObservation = computed(() => {
                         <DataTable :value="hoursWorkedArray" size="small" tableStyle="min-width: 10rem">
                             <Column field="date_worked" header="Fecha"></Column>
                             <Column field="name_company" header="Empresa"></Column>
-                            <Column field="start_time" header="Horario"></Column>
+                            <Column field="horario" header="Horario"></Column>
                             <Column field="total_hours" header="Horas"></Column>
                             <Column field="valor_total" header="Valor total"></Column>
                         </DataTable>
