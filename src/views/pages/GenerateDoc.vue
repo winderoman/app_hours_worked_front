@@ -117,6 +117,7 @@ const isValidObservation = computed(() => {
                     </div>
 
                     <h4 class="col-12 text-center" v-if="visibleMsg">No hay horas registradas.</h4>
+                    <!-- Table 
                     <div v-if="visibleTable" class="field col-12">
                         <DataTable :value="hoursWorkedArray" size="small" tableStyle="min-width: 10rem">
                             <Column field="date_worked" header="Fecha"></Column>
@@ -126,6 +127,7 @@ const isValidObservation = computed(() => {
                             <Column field="total_hours" header="Horas"></Column>
                         </DataTable>
                     </div>
+                    -->
                     <div class="field col-12">
                         <label for="address">Observación</label>
                         <Textarea id="address" rows="4" v-model="observation" :disabled="!isValidHoursWorked" />
