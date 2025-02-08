@@ -8,6 +8,10 @@ export const getHourWorkedByDate = async (data) => {
     return (await axios.post(`${BASE_URL}/hour_work/get_hours_worked`,data)).data;
 }
 
+export const getHourWorkedEdit = async (data) => {
+    return (await axios.post(`${BASE_URL}/hour_work/get_hours_worked_edit`,data)).data;
+}
+
 export const updateHourWorked = async (id_hour,data) => {
     return (await axios.put(`${BASE_URL}/hour_work/hours_worked/${id_hour}`,data)).data;
 }

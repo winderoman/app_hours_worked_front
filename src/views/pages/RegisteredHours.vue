@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue';
-import { deleteHourWorked, getHourWorkedByDate, updateHourWorked } from '../../service/HourService';
+import { deleteHourWorked, getHourWorkedEdit, updateHourWorked } from '../../service/HourService';
 import { DateTime } from 'luxon';
 import { getCompanies } from '../../service/CompanyService';
 import { watch } from 'vue';
@@ -40,7 +40,7 @@ const searchDates = async () => {
         start_date: formattedStartDate
     }
 
-    const response = await getHourWorkedByDate(data);
+    const response = await getHourWorkedEdit(data);
     if (response.length > 0) {
         hoursWorkedArray.value = response;
         visibleTable.value = true;
