@@ -103,6 +103,8 @@ const updateHour = async () => {
     try {
         await updateHourWorked(hour.value.id_hour_worked, data)
         toast.add({ severity: 'success', summary: 'Successful', detail: `Hora editada con éxito`, life: 3000 });
+        visibleTable.value = false;
+        hoursWorkedArray.value = [];
     } catch (error) {
         await searchDates()
         toast.add({ severity: 'warning', summary: 'Error', detail: `Error al editar`, life: 3000 });
@@ -168,11 +170,12 @@ onMounted(async () => {
                                         @click="confirmDeleteHour(slotProps.data)" />
                                 </template>
                             </Column>
+                            <Column field="day_worked" header="Día"></Column>
                             <Column field="date_worked" header="Fecha"></Column>
                             <Column field="name_company" header="Empresa"></Column>
-                            <Column field="horario" header="Horario"></Column>
+                            <Column field="start_time" header="Desde"></Column>
+                            <Column field="end_time" header="Hasta"></Column>
                             <Column field="total_hours" header="Horas"></Column>
-                            <Column field="valor_total" header="Valor total"></Column>
                         </DataTable>
 
                         <Dialog v-model:visible="editDialog" :style="{ width: '450px' }" header="Hora registrada"
